@@ -44,8 +44,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=-pipe -mthreads -D__GNUWIN32__ -D__WXMSW__ -DwxUSE_UNICODE -Wall -O2 -IC:\wxWidgets\include -IC:\wxWidgets\lib\gcc_lib\mswu
-CXXFLAGS=-pipe -mthreads -D__GNUWIN32__ -D__WXMSW__ -DwxUSE_UNICODE -Wall -O2 -IC:\wxWidgets\include -IC:\wxWidgets\lib\gcc_lib\mswu
+CCFLAGS=-pipe -mthreads -D__GNUWIN32__ -D__WXMSW__ -DwxUSE_UNICODE -Wall -g -IC:\wxWidgets\include -IC:\wxWidgets\lib\gcc_lib\mswu
+CXXFLAGS=-pipe -mthreads -D__GNUWIN32__ -D__WXMSW__ -DwxUSE_UNICODE -Wall -g -IC:\wxWidgets\include -IC:\wxWidgets\lib\gcc_lib\mswu
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -58,11 +58,11 @@ LDLIBSOPTIONS=-L/C/wxWidgets/lib/gcc_lib
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_wxwidgets_div2_demo_windows_.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_wxwidgets_div2_demo-windows.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_wxwidgets_div2_demo_windows_.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_wxwidgets_div2_demo-windows.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_wxwidgets_div2_demo_windows_ ${OBJECTFILES} ${LDLIBSOPTIONS} -LC:\wxWidgets\lib\gcc_lib -s -mthreads -lwxmsw31u_core -lwxbase31u -lwxpng -lwxjpeg -lwxtiff -lwxzlib -lwxregexu -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid -lcomctl32 -lwsock32 -lodbc32 -lshlwapi -lversion -loleacc -luxtheme
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans_wxwidgets_div2_demo-windows ${OBJECTFILES} ${LDLIBSOPTIONS} -LC:\wxWidgets\lib\gcc_lib -mthreads -lwxmsw31u_core -lwxbase31u -lwxpng -lwxjpeg -lwxtiff -lwxzlib -lwxregexud -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid -lcomctl32 -lwsock32 -lodbc32 -lshlwapi -lversion -loleacc -luxtheme
 
 ${OBJECTDIR}/controls.o: controls.cpp
 	${MKDIR} -p ${OBJECTDIR}

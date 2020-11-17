@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=NetBeans_wxWidgets_Div2_demo(windows)
+PROJECTNAME=NetBeans_wxWidgets_Div2_demo-windows
 
 # Active Configuration
 DEFAULTCONF=Debug
